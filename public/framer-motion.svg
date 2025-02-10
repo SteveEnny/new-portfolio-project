@@ -1,0 +1,21 @@
+<div class="w-12 h-12 transition-colors duration-300 group">
+  <svg
+    width="2500"
+    height="2500"
+    viewBox="3.7 3.7 43.6 43.6"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      class="fill-black transition-colors duration-300 group-hover:fill-[#59529d]"
+      d="M47.3 3.7v21.8l-10.9 10.9-10.9 10.9-10.9-10.9 10.9-10.9v.1-.1z"
+    />
+    <path
+      class="fill-black transition-colors duration-300 group-hover:fill-[#5271b4]"
+      d="M47.3 25.5v21.8l-10.9-10.9z"
+    />
+    <path
+      class="fill-black transition-colors duration-300 group-hover:fill-[#bb4b96]"
+      d="M25.5 25.5l-10.9 10.9-10.9 10.9V3.7l10.9 10.9z"
+    />
+  </svg>
+</div>

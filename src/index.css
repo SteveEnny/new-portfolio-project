@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.landing_page {
+  /* background-image: ; */
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  /* font-optical-sizing: auto; */
+}
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    /* styles */
+    --colors-textPrimary: #1a1a1a;
+    --colors-textSecondary: #1a1a1a;
+    --colors-textLighter: #606060;
+    --colors-backgroundPrimary: #ffffff;
+    --colors-backgroundSecondary: #fbfbfb;
+    --colors-gradient1: linear-gradient(
+      51.06deg,
+      #9358f7 0.87%,
+      #9259f7 7.31%,
+      #8e5df6 13.75%,
+      #8862f5 20.19%,
+      #806bf4 26.63%,
+      #7575f2 33.07%,
+      #6882f0 39.51%,
+      #5990ee 45.95%,
+      #4a9feb 52.39%,
+      #3bade9 58.84%,
+      #2ebae7 65.28%,
+      #23c4e5 71.72%,
+      #1bcde4 78.16%,
+      #15d2e3 84.6%,
+      #11d6e2 91.04%,
+      #10d7e2 97.48%
+    );
+    --colors-gradient2: linear-gradient(135deg, #6964de 2.88%, #fca6e9 100%);
+    --colors-gradient3: linear-gradient(45.4deg, #f4426c 6.41%, #fbf2b1 98.99%);
+    --colors-gradient4: linear-gradient(
+      132.33deg,
+      #d24074 -0.67%,
+      #a31593 102.54%
+    );
+    --colors-link: #6cace4;
+    --colors-tab: #e4e4e4;
+    --colors-hiContrast: var(--colors-slate12);
+    --colors-loContrast: white;
+    --colors-canvas: hsl(0 0% 93%);
+    --colors-panel: white;
+    --colors-transparentPanel: hsl(0 0% 0% / 97%);
+    --colors-shadowLight: hsl(206 22% 7% / 35%);
+    --colors-shadowDark: hsl(206 22% 7% / 20%);
+    --fonts-untitled: Untitled Sans, -apple-system, system-ui, sans-serif;
+    --fonts-mono: Söhne Mono, menlo, monospace;
+    --fonts-inter: Inter, sans-serif;
+    --fonts-poppins: Poppins, sans-serif;
+    --fonts-greatVibes: Great Vibes, cursive;
+    --fonts-ogg: Ogg, sans-serif;
+    --space-1: 5px;
+    --space-2: 10px;
+    --space-3: 15px;
+    --space-4: 20px;
+    --space-5: 25px;
+    --space-6: 35px;
+    --space-7: 45px;
+    --space-8: 65px;
+    --space-9: 80px;
+    --fontWeights-1: 300;
+    --fontWeights-2: 400;
+    --fontWeights-3: 500;
+    --fontWeights-4: 600;
+    --fontWeights-5: 700;
+    --sizes-1: 5px;
+    --sizes-2: 10px;
+    --sizes-3: 15px;
+    --sizes-4: 20px;
+    --sizes-5: 25px;
+    --sizes-6: 35px;
+    --sizes-7: 45px;
+    --sizes-8: 65px;
+    --sizes-9: 80px;
+    --fontSizes-1: 12px;
+    --fontSizes-2: 13px;
+    --fontSizes-3: 15px;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.bg-gradient1 {
+  background: var(--colors-gradient1);
+}
+.bg-gradient2 {
+  background: var(--colors-gradient2);
+}
+.bg-gradient3 {
+  background: var(--colors-gradient3);
+}
+.bg-gradient4 {
+  background: var(--colors-gradient4);
+}
