@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const HtmlIcon = () => {
   const [hovered, setHovered] = useState(false);
