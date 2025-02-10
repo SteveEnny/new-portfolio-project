@@ -9,7 +9,6 @@ import ReactIcon from "@/Icons/React";
 import TailwindIcon from "@/Icons/TailwindIcon";
 import ContactForm from "./ContactForm";
 
-// import profile from "../assets/images/profile.jpg";
 function AboutMe() {
   return (
     // <div

@@ -6,7 +6,7 @@ type headerType = {
   contact: React.MutableRefObject<HTMLDivElement | null>;
 };
 // type headerType
-function Header({ about, project, contact }: headerType) {
+function Header({ about }: headerType) {
   const scrollToSection = (
     elementRef: React.MutableRefObject<HTMLDivElement | null>
   ) => {

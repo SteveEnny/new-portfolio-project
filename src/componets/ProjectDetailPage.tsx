@@ -2,19 +2,6 @@ import { Card, CardContent } from "@/components/ui/card";
 // import { Button } from "@/components/ui/button";
 import { details } from "@/data/project-data";
 import { Link, useParams } from "react-router";
-// const features = [
-//   "Authentication with Firebase",
-//   "State Management with Redux Query",
-//   "Data Management with Redux",
-//   "Dark and Light Mode powered by Tailwind CSS",
-//   "Excellent error handling",
-//   "Excellent code structure similar to that of GitHub",
-// ];
-
-// const futurePlans = [
-//   "Searching for any repository of Github",
-//   "Charts and graphs",
-// ];
 
 const lessonsLearned = [
   {

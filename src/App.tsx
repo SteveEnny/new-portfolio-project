@@ -5,10 +5,6 @@ import AboutMe from "./componets/AboutMe";
 import Home from "./componets/Home";
 import ProjectDetailsPage from "./componets/ProjectDetailPage";
 function App() {
-  // const about = useRef<HTMLDivElement>(null);
-  // const project = useRef<HTMLDivElement>(null);
-  // const contact = useRef<HTMLDivElement>(null);
-
   return (
     <BrowserRouter>
       <Routes>

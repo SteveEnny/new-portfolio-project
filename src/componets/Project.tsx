@@ -1,18 +1,4 @@
-// import * as React from "react";
-// import uppcorn from "@/assets/images/uppcorn.png";
-// import wildO from "@/assets/images/wildO.png";
-
 import { Link } from "react-router";
-
-// import { Card, CardContent } from "@/components/ui/card";
-// import {
-//   Carousel,
-//   CarouselContent,
-//   CarouselItem,
-//   CarouselNext,
-//   CarouselPrevious,
-// } from "@/components/ui/carousel";
-// import { AboutProject } from "./AboutProject";
 
 type projectsType = {
   id: string;

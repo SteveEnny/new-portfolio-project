@@ -1,7 +1,3 @@
-// import * as React from "react";
-// import uppcorn from "@/assets/images/uppcorn.png";
-// import wildO from "@/assets/images/wildO.png";
-
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
