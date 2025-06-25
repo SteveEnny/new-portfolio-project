@@ -54,6 +54,15 @@ export default {
           1: "var(--colors-gradient1)",
         },
       },
+      keyframes: {
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(32px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
+      animation: {
+        fadeInUp: 'fadeInUp 0.7s cubic-bezier(0.22,1,0.36,1) forwards',
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

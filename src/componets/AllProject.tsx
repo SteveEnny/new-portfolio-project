@@ -46,10 +46,10 @@ interface Project {
 
 function AllProject() {
   return (
-    <div className="min-h-[100vh] w-[640px] md:w-[1360px] relative pt-[20px] pb-[20px] mx-auto">
-      <main className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-6">Projects</h1>
-        <p className="font-medium mb-12 max-w-[23rem] px-2 md:max-w-3xl">
+    <div className="min-h-[100vh] w-full max-w-[1360px] mx-auto relative pt-6 pb-6 px-2 sm:px-4">
+      <main className="container mx-auto px-0 sm:px-4 py-8 sm:py-16">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-center md:text-left">Projects</h1>
+        <p className="font-medium mb-8 sm:mb-12 max-w-full sm:max-w-2xl md:max-w-3xl px-0 sm:px-2 text-center md:text-left">
           Here are some projects I've recently worked on. They are a mix of
           personal exploration and coding challenges. It also shows my
           progression in skills, technologies, and approaches. I've learned a

@@ -85,31 +85,38 @@ const projects: projectsType[] = [
 
 export function Project() {
   return (
-    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-      {projects.map((project) => (
-        <div className="flex flex-col gap-3">
-          <img
-            src={project.img}
-            alt=""
-            className="w-[23rem] md:w-[40rem] px-2"
-          />
-          <p className="mt-3 font-semibold text-lg">{project.name}</p>
-          <p className="text-base font-normal max-w-[23rem] md:max-w-[25rem]">
-            {project.description}
-          </p>
-
-          {/* <a href="https://unepopcorn.vercel.app/">About pro</a> */}
-          <p className="font-medium text-base text-blue-600">{project.stack}</p>
-          <div>
-            <button className="p-1 bg-gradient1 rounded-[8px] mt-3">
-              <div className=" hover:text-blue-400 bg-white px-6 py-2 rounded-[5px]">
-                <Link to={`/projects/${project.id}`}>View project</Link>
-                {/* <a href={project.link}>View project</a> */}
-              </div>
-            </button>
+    <div>
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-rose-500 to-indigo-500 uppercase mb-10 text-center tracking-wide drop-shadow-md">
+        Featured Projects
+      </h2>
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {projects.map((project, idx) => (
+          <div
+            key={project.id}
+            className="flex flex-col gap-3 bg-white rounded-xl shadow-lg p-4 transform transition-transform transition-shadow duration-500 ease-in-out hover:scale-110 hover:shadow-2xl hover:-translate-y-1 hover:delay-300 animate-fadeInUp"
+          >
+            <img
+              src={project.img}
+              alt={project.name}
+              className="w-[23rem] md:w-[40rem] px-2 rounded-lg object-cover"
+            />
+            <h3 className="text-xl sm:text-2xl font-semibold text-indigo-700 border-l-4 border-indigo-400 pl-3 mt-3 mb-1">
+              {project.name}
+            </h3>
+            <p className="text-base font-normal max-w-[23rem] md:max-w-[25rem]">
+              {project.description}
+            </p>
+            <p className="font-medium text-base text-indigo-600">{project.stack}</p>
+            <div>
+              <button className="p-1 bg-gradient1 rounded-[8px] mt-3">
+                <div className="hover:text-indigo-500 bg-white px-6 py-2 rounded-[5px] transition-colors duration-300">
+                  <Link to={`/projects/${project.id}`}>View project</Link>
+                </div>
+              </button>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
