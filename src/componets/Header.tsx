@@ -7,7 +7,7 @@ type headerType = {
   contact: React.MutableRefObject<HTMLDivElement | null>;
 };
 
-function Header({ about, project, contact }: headerType) {
+function Header({ about, project }: headerType) {
   const [menuOpen, setMenuOpen] = useState(false);
   const scrollToSection = (
     elementRef: React.MutableRefObject<HTMLDivElement | null>
@@ -64,10 +64,10 @@ function Header({ about, project, contact }: headerType) {
             </NavLink>
           </li>
           {/* <li
-            onClick={() => scrollToSection(contact)}
+            onClick={() => scrollToSectio)}
             className="bg-gradient3 rounded-xl w-full md:w-auto text-center"
           >
-            <NavLink to="contact" className="block px-4 py-2 md:py-3 bg-white rounded-xl">
+            <NavLink to" className="block px-4 py-2 md:py-3 bg-white rounded-xl">
               Contact
             </NavLink>
           </li> */}

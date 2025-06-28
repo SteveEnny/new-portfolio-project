@@ -90,7 +90,7 @@ export function Project() {
         Featured Projects
       </h2>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project, idx) => (
+        {projects.map((project) => (
           <div
             key={project.id}
             className="flex flex-col gap-3 bg-white rounded-xl shadow-lg p-4 transform transition-transform transition-shadow duration-500 ease-in-out hover:scale-110 hover:shadow-2xl hover:-translate-y-1 hover:delay-300 animate-fadeInUp"
