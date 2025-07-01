@@ -27,9 +27,7 @@ function Header({ about, project }: headerType) {
     }
   }, [isDark]);
 
-  const toggleDarkMode = () => {
-    setIsDark((prev) => !prev);
-  };
+
 
   const scrollToSection = (
     elementRef: React.MutableRefObject<HTMLDivElement | null>
