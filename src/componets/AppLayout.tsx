@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import Header from "./Header";
 import { Outlet } from "react-router";
+import DarkModeToggle from "../components/ui/DarkModeToggle";
 
 function AppLayout() {
   const about = useRef<HTMLDivElement>(null);
@@ -12,6 +13,7 @@ function AppLayout() {
       {/* <div className="  bg-gradient-to-r from-cyan-200 to-blue-400 rounded-[0px_0px_100px_100px]"> */}
       <Header about={about} contact={contact} project={project} />
       <Outlet />
+      <DarkModeToggle />
     </div>
   );
 }

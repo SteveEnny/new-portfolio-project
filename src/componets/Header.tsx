@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router";
-import { Button } from "../components/ui/button";
+import resume from "../assets/resume.pdf";
+
 
 type headerType = {
   about: React.MutableRefObject<HTMLDivElement | null>;
@@ -57,14 +58,6 @@ function Header({ about, project }: headerType) {
             <span className={`block h-0.5 w-6 bg-black mb-1 transition-all ${menuOpen ? 'opacity-0' : ''}`}></span>
             <span className={`block h-0.5 w-6 bg-black transition-all ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
           </button>
-          {/* Dark mode toggle */}
-          <Button variant="outline" size="icon" onClick={toggleDarkMode} aria-label="Toggle dark mode">
-            {isDark ? (
-              <span role="img" aria-label="Light mode">🌞</span>
-            ) : (
-              <span role="img" aria-label="Dark mode">🌙</span>
-            )}
-          </Button>
         </div>
         {/* Navigation links */}
         <ul
@@ -94,14 +87,15 @@ function Header({ about, project }: headerType) {
               Project
             </NavLink>
           </li>
-          {/* <li
-            onClick={() => scrollToSectio)}
-            className="bg-gradient3 rounded-xl w-full md:w-auto text-center"
-          >
-            <NavLink to" className="block px-4 py-2 md:py-3 bg-white rounded-xl">
-              Contact
-            </NavLink>
-          </li> */}
+          <li className="bg-gradient3 rounded-xl w-full md:w-auto text-center">
+            <a
+              href={resume}
+              download
+              className="block px-4 py-2 md:py-3 bg-amber-500 text-white font-semibold rounded-lg shadow hover:bg-amber-600 transition-colors text-sm md:text-base"
+            >
+              Download Resume
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
