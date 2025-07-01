@@ -4,7 +4,8 @@ import { Button } from "./button";
 const DarkModeToggle = () => {
   const [isDark, setIsDark] = useState(() => {
     if (typeof window !== "undefined") {
-      return document.documentElement.classList.contains("dark");
+      document.documentElement.classList.add("dark");
+      return true;
     }
     return false;
   });
