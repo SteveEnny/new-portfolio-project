@@ -11,21 +11,7 @@ type headerType = {
 
 function Header({ about, project }: headerType) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isDark, setIsDark] = useState(() => {
-    if (typeof window !== "undefined") {
-      document.documentElement.classList.add("dark");
-      return true;
-    }
-    return false;
-  });
-
-  useEffect(() => {
-    if (isDark) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [isDark]);
+  // 
 
 
 
