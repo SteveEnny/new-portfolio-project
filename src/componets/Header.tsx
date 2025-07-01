@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router";
+import { Button } from "../components/ui/button";
 
 type headerType = {
   about: React.MutableRefObject<HTMLDivElement | null>;
@@ -9,6 +10,26 @@ type headerType = {
 
 function Header({ about, project }: headerType) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isDark, setIsDark] = useState(() => {
+    if (typeof window !== "undefined") {
+      document.documentElement.classList.add("dark");
+      return true;
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    if (isDark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [isDark]);
+
+  const toggleDarkMode = () => {
+    setIsDark((prev) => !prev);
+  };
+
   const scrollToSection = (
     elementRef: React.MutableRefObject<HTMLDivElement | null>
   ) => {
@@ -25,25 +46,35 @@ function Header({ about, project }: headerType) {
         <div className="text-stone-500 from-cyan-200 to-blue-400 font-bold">
           Steve.Oe
         </div>
-        {/* Hamburger menu for mobile */}
-        <button
-          className="md:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none"
-          onClick={() => setMenuOpen((open) => !open)}
-          aria-label="Toggle menu"
-        >
-          <span className={`block h-0.5 w-6 bg-black mb-1 transition-all ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-          <span className={`block h-0.5 w-6 bg-black mb-1 transition-all ${menuOpen ? 'opacity-0' : ''}`}></span>
-          <span className={`block h-0.5 w-6 bg-black transition-all ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
-        </button>
+        <div className="flex items-center gap-4">
+          {/* Hamburger menu for mobile */}
+          <button
+            className="md:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none"
+            onClick={() => setMenuOpen((open) => !open)}
+            aria-label="Toggle menu"
+          >
+            <span className={`block h-0.5 w-6 bg-black mb-1 transition-all ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+            <span className={`block h-0.5 w-6 bg-black mb-1 transition-all ${menuOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`block h-0.5 w-6 bg-black transition-all ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+          </button>
+          {/* Dark mode toggle */}
+          <Button variant="outline" size="icon" onClick={toggleDarkMode} aria-label="Toggle dark mode">
+            {isDark ? (
+              <span role="img" aria-label="Light mode">🌞</span>
+            ) : (
+              <span role="img" aria-label="Dark mode">🌙</span>
+            )}
+          </Button>
+        </div>
         {/* Navigation links */}
         <ul
-          className={`absolute md:static top-full left-0 right-0 bg-white md:bg-transparent shadow-md md:shadow-none flex flex-col md:flex-row gap-2 md:gap-4 items-center px-4 md:px-0 py-4 md:py-0 transition-all duration-300 z-30 ${menuOpen ? 'block' : 'hidden'} md:flex`}
+          className={`absolute md:static top-full left-0 right-0 bg-background md:bg-transparent shadow-md md:shadow-none flex flex-col md:flex-row gap-2 md:gap-4 items-center px-4 md:px-0 py-4 md:py-0 transition-all duration-300 z-30 ${menuOpen ? 'block' : 'hidden'} md:flex`}
         >
           <li
             onClick={() => scrollToSection(about)}
             className="bg-gradient3 rounded-xl w-full md:w-auto text-center"
           >
-            <NavLink to="/" className="block px-4 py-2 md:py-3 backdrop-blur-md bg-white z-20 rounded-xl">
+            <NavLink to="/" className="block px-4 py-2 md:py-3 backdrop-blur-md bg-card dark:bg-card z-20 rounded-xl">
               Home
             </NavLink>
           </li>
@@ -51,7 +82,7 @@ function Header({ about, project }: headerType) {
             onClick={() => scrollToSection(about)}
             className="bg-gradient3 rounded-xl w-full md:w-auto text-center"
           >
-            <NavLink to="about" className="block px-4 py-2 md:py-3 bg-white rounded-xl">
+            <NavLink to="about" className="block px-4 py-2 md:py-3 bg-card dark:bg-card rounded-xl">
               About
             </NavLink>
           </li>
@@ -59,7 +90,7 @@ function Header({ about, project }: headerType) {
             onClick={() => scrollToSection(project)}
             className="bg-gradient3 rounded-xl w-full md:w-auto text-center"
           >
-            <NavLink to="projects" className="block px-4 py-2 md:py-3 bg-white rounded-xl">
+            <NavLink to="projects" className="block px-4 py-2 md:py-3 bg-card dark:bg-card rounded-xl">
               Project
             </NavLink>
           </li>

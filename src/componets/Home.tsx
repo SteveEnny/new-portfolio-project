@@ -17,11 +17,11 @@ function Home() {
 
       <div
         ref={contact}
-        className="w-[1360px] mx-auto flex flex-col mt-[10rem]"
+        className="w-full max-w-4xl mx-auto flex flex-col mt-16 px-2 sm:px-4"
       >
-        <div className="text-center">
-          <p className="font-semibold text-[3rem] uppercase"> get in touch</p>
-          <p className="font-medium text-xl">
+        <div className="text-center contact w-full">
+          <p className="font-semibold text-2xl sm:text-3xl md:text-4xl uppercase"> get in touch</p>
+          <p className="font-medium text-base sm:text-lg md:text-xl">
             Have an inquiry or feedback ? fill out the form below to contact me.
           </p>
         </div>

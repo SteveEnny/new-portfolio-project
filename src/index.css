@@ -111,9 +111,11 @@ body {
     --fontSizes-3: 15px;
   }
   .dark {
-    --background: 0 0% 3.9%;
+    --background: 0 0% 18.4%;
+
+    /* --background: 0 0% 3.9%; */
     --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
+    --card: 0 0% 18.4%;
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;

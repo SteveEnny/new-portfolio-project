@@ -15,24 +15,24 @@ function AboutMe() {
     //   // ref={about}
     //   className="w- flex flex-col lg:flex-row items-center justify-between border  text-stone-700 md:px-[5rem] lg:px-[10rem] xl:px-[20rem]"
     // >
-    <div className="min-h-[100vh] w-[640px] md:w-[1360px] relative px-4 pt-[20px] pb-[20px] mx-auto">
+    <div className="min-h-[100vh] w-full max-w-[1360px] relative px-4 sm:px-4 pt-5 pb-5 mx-auto">
       <div
         // ref={about}
-        className="flex flex-col items-centers md:flex-row gap-[5rem] my-[5rem] text-base md:text-lg font-medium"
+        className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-[5rem] my-[5rem] text-base md:text-lg font-medium"
       >
-        <div className="mb-9">
+        <div className="mb-5 flex justify-center md:block">
           <img
             src="/Profile pics.jpg"
             alt=""
-            className="rounded-[100px] mx-auto w-[20rem] md:w-full object-cover"
+            className="rounded-full w-[15rem] h-[15rem] sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-96 lg:h-96 object-cover mx-auto"
           />
         </div>
-        <div className="my-10 max-w-[22rem] md:max-w-full">
+        <div className="my-10 max-w-full md:max-w-[40rem]">
           <h2 className="font-bold text-xl md:text-3xl">
             Welcome to my profile page
           </h2>
           <p className="text-balance font-medium my-5 md:text-left">
-            I’m an experienced and versatile Full Stack Web Developer with a
+            I'm an experienced and versatile Full Stack Web Developer with a
             deep passion for building seamless, impactful, and high-performing
             websites. My goal is to turn your ideas into powerful web
             experiences, using a blend of creativity, technical expertise, and

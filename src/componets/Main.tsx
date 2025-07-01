@@ -16,13 +16,13 @@ function Main({ project }: headerType) {
   return (
     <div className="min-h-[100vh] w-full md:w-[1360px] relative pt-6 pb-6 px-4 md:px-0 mx-auto flex flex-col md:flex-row gap-8 md:gap-[6rem] lg:gap-[10rem] items-center md:items-center">
       <div className="flex flex-col my-auto max-w-full md:max-w-[40rem] px-0">
-        <p className="font-medium text-[#121212] text-base sm:text-lg md:text-xl lg:text-2xl mb-2">
+        <p className="font-medium text-primary text-base sm:text-lg md:text-xl lg:text-2xl mb-2">
           Hey, I'm
         </p>
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FABC3F] via-[#E85C0D] to-[#C7253E] mb-2">
           Stephen Eniola
         </h1>
-        <p className="font-medium text-center md:text-left text-[#121212] text-sm sm:text-base md:text-lg mb-4">
+        <p className="font-medium text-center md:text-left text-primary text-sm sm:text-base md:text-lg mb-4">
           I'm a self-taught frontend developer based in Nigeria and I make the
           world a better place by building quality, consistent and fully
           accessible user interfaces with react.
@@ -32,36 +32,36 @@ function Main({ project }: headerType) {
             className="text-stone-400 border rounded-md p-1 bg-gradient3"
             onClick={() => scrollToSection(project)}
           >
-            <div className="bg-white px-4 py-2 sm:px-6 sm:py-3">
+            <div className="bg-card dark:bg-card px-4 py-2 sm:px-6 sm:py-3">
               <Link
                 to="https://github.com/SteveEnny"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white px-2 sm:px-4 py-2 sm:py-3"
+                className="bg-card dark:bg-card px-2 sm:px-4 py-2 sm:py-3"
               >
                 Github
               </Link>
             </div>
           </button>
           <button className="text-stone-400 border border-blue-00 rounded-md p-1 bg-gradient3">
-            <div className="bg-white px-4 py-2 sm:px-6 sm:py-3">
+            <div className="bg-card dark:bg-card px-4 py-2 sm:px-6 sm:py-3">
               <Link
                 to="https://x.com/Stephen2Omotoso"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white px-2 sm:px-4 py-2 sm:py-3"
+                className="bg-card dark:bg-card px-2 sm:px-4 py-2 sm:py-3"
               >
                 X
               </Link>
             </div>
           </button>
           <button className="text-stone-400 border border-blue-00 rounded-md p-1 bg-gradient4">
-            <div className="bg-white px-4 py-2 sm:px-6 sm:py-3">
+            <div className="bg-card dark:bg-card px-4 py-2 sm:px-6 sm:py-3">
               <Link
                 to="http://linkedin.com/in/omotoso-eniola-390601226"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white px-2 sm:px-4 py-2 sm:py-3"
+                className="bg-card dark:bg-card px-2 sm:px-4 py-2 sm:py-3"
               >
                 Linkedin
               </Link>
